@@ -22,7 +22,7 @@ const Status = () => {
                 setTimeout(async () => {
                     alert('Congratulations! You won! Click OK to start a new game');
                     await startNewGame();
-                }, 300);
+                }, 400);
             }
         }
     }, [status, guessedLetters, word]);
