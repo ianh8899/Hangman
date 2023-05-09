@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  justify-content: center;
+}
+
+.keyboard-col {
+  padding: 5px;
+  min-width: 40px;
+}
+
+.letter-button {
+  width: 100%;
+}
