@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect, useCallback } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {fetchWordUpdateState} from "./fetchWord";
 
@@ -28,9 +28,9 @@ const Status = () => {
     }, [status, guessedLetters, word]);
 
     // Function to start a new game by fetching a new word, resetting guessedLetters, and resetting status
-    const startNewGame = async () => {
+    const startNewGame = useCallback(async () => {
         await fetchWordUpdateState(dispatch);
-    };
+    }, [dispatch]);
 
 
     return (
