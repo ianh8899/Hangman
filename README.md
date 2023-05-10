@@ -31,7 +31,21 @@ Follow these steps to install and run the Hangman app on your local machine:
 3) Play the game
 
 ## Usage
-You can provide a brief description of how to use the app and any important tips. You can also add screenshots to showcase the app's features.
+
+On startup and after pressing new game you should be greeted with this screen. The number of failed attempts will be set to 0.
+The API call should have been made and there should be a word pre-populated with the underscores. Obviously your word might be shorter/longer.
+Press the letter buttons to start making guesses.
+![startup](screenshots/Screenshot startup.png)
+
+When you have made 10 incorrect guesses you should see the alert pop up. Clicking ok starts a new game.
+![failed](screenshots/Screenshot failed.png)
+
+When you have correctly guessed the work you should see the alert pop up. Clicking ok starts a new game.
+![winning](screenshots/Screenshot winning.png)
+
+The help button is a toggle for the game rules. It will change its name so can be used to open and close the rules
+![helpopen](screenshots/Screenshot toggle help open.png)
+![helpclosed](screenshots/Screenshot toggle help closed.png)
 
 ## Credits
-Include any contributors, external libraries, or other resources you'd like to acknowledge and give credit to.
+Created by myself, with lots of help from YouTube, StackOverflow and Google.
