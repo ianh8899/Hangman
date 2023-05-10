@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchWordUpdateState } from "./fetchWord";
+import { fetchWordUpdateState } from "./FetchWord";
 
 const NewGameButton = () => {
     // Access the dispatch function from Redux using the useDispatch hook

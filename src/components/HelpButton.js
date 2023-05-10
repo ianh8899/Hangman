@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleGameRules } from '../actions/hangmanActions';
+import { toggleGameRules } from '../actions/HangmanActions';
 
 const HelpButton = () => {
     const dispatch = useDispatch();

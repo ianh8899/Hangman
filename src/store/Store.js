@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import hangmanReducer from '../reducers/hangmanReducer';
+import hangmanReducer from '../reducers/HangmanReducer';
 
 const store = configureStore({
     reducer: {

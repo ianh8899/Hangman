@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import Display from './components/display';
-import Keyboard from './components/keyboard';
-import Status from './components/status';
-import NewGameButton from './components/newGameButton';
-import HelpButton from './components/helpButton';
-import GameRules from './components/gameRules';
-import { fetchWordUpdateState } from "./components/fetchWord";
+import Display from './components/Display';
+import Keyboard from './components/Keyboard';
+import Status from './components/Status';
+import NewGameButton from './components/NewGameButton';
+import HelpButton from './components/HelpButton';
+import GameRules from './components/GameRules';
+import { fetchWordUpdateState } from "./components/FetchWord";
 
 const HangmanApp = () => {
     const dispatch = useDispatch();

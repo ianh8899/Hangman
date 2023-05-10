@@ -1,4 +1,4 @@
-import { setWord } from "../actions/hangmanActions";
+import { setWord } from "../actions/HangmanActions";
 
 // Function to fetch a new word and update the state accordingly
 export const fetchWordUpdateState = async (dispatch) => {

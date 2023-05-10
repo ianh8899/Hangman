@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateGuessedLetters, updateStatus } from '../actions/hangmanActions';
+import { updateGuessedLetters, updateStatus } from '../actions/HangmanActions';
 
 const Keyboard = () => {
     const dispatch = useDispatch();

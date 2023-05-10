@@ -1,8 +1,8 @@
 import './stylesheets/App.css';
 import React from 'react';
 import {Provider} from 'react-redux';
-import store from './store/store';
-import HangmanApp from './hangmanApp';
+import store from './store/Store';
+import HangmanApp from './HangmanApp';
 
 const App = () => {
     return (

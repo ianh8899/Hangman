@@ -1,6 +1,6 @@
-import React, { useEffect, useCallback } from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {fetchWordUpdateState} from "./fetchWord";
+import {fetchWordUpdateState} from "./FetchWord";
 
 const Status = () => {
     // Access the Redux state using useSelector hooks
@@ -12,30 +12,30 @@ const Status = () => {
     // Use useEffect to check if the game is won or lost whenever the status, word, or guessedLetters change
     useEffect(() => {
         if (status === 10) {
-            setTimeout(async () => {
+            setTimeout(() => { //setTimout added to make sure images render before alert
                 alert('Sorry you lost! Click OK to start a new game');
-                await startNewGame();
+                startNewGame();
             }, 400);
         } else if (word) {
             const wordGuessed = word.split('').every((letter) => guessedLetters.includes(letter));
             if (wordGuessed) {
-                setTimeout(async () => {
+                setTimeout(() => { //setTimout added to make sure letters render before alert
                     alert('Congratulations! You won! Click OK to start a new game');
-                    await startNewGame();
-                }, 400);
+                    startNewGame();
+                }, 300);
             }
         }
     }, [status, guessedLetters, word]);
 
     // Function to start a new game by fetching a new word, resetting guessedLetters, and resetting status
-    const startNewGame = useCallback(async () => {
+    const startNewGame = async () => {
         await fetchWordUpdateState(dispatch);
-    }, [dispatch]);
+    };
 
 
     return (
         <div>
-            <h5>Failed Attempts: {status}</h5>
+            <h3>Failed Attempts: {status}</h3>
             {/* Render the hangman image based on the status value */}
             <img src={require(`../images/state${status}.GIF`)} alt={`Hangman with ${status} failed attempts`}/>
         </div>
